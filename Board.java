@@ -17,6 +17,7 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Label;
 import javafx.scene.Node.*;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import java.util.Scanner;
 
 public class Board extends Application
@@ -32,6 +33,7 @@ public class Board extends Application
     GraphicsContext gc = canvas.getGraphicsContext2D();
     Scanner keyboard = new Scanner (System.in);
     int number;
+	GridPane pane = new GridPane();
 
     Image image = new Image("file:boardImage.jpg");
     ImageView imageView1 = new ImageView();
@@ -44,25 +46,27 @@ public class Board extends Application
 	
 	Image x = new Image("X.png");
 	
-	Button button1 = new Button("click");//create buttons for clicking
-	button1.setTranslateX(-450);//location of button
+	Button button1 = new Button("click");
+	button1.setTranslateX(-450);
 	button1.setTranslateY(40);
 	button1.setPrefWidth(100);
 	button1.setPrefHeight(70);
 	//button1.setStyle()
-	button1.setOnAction(new EventHandler<ActionEvent>(){ //when button is clicked, set the graphic of the button and disables the button (wip)
+	button1.setOnAction(new EventHandler<ActionEvent>(){
 	@Override public void handle(ActionEvent e) {
+	System.out.println("1");
 	button1.setGraphic(new ImageView(x));
     //button1.setDisable(false);
     }
 	});
+	pane.add(button1,1,1);
 
 	BorderPane root1 = new BorderPane();
 	BorderPane topLeft = new BorderPane();
 	root1.setBottom(button1);
 	
     HBox box = new HBox(); //helps manage sizing image
-    box.getChildren().addAll(imageView1, button1);
+    box.getChildren().addAll(imageView1, pane, button1);
 
     Group root = new Group(); //holds observable children (what can be in a group)
     root.getChildren().add(box);
@@ -77,8 +81,6 @@ public class Board extends Application
     stage.setScene(scene);
     stage.sizeToScene();
     stage.show();
-	
-
   }
 
 
