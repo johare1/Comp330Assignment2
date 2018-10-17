@@ -21,6 +21,9 @@ class Board:
     global win
     win=False
     
+    global draw
+    draw = False
+    
     global b1, b2, b3, b4, b5, b6, b7, b8, b9
     
     def makeBoard(self):
@@ -231,6 +234,7 @@ class Board:
         if(win == True or turn == 9):
             if(turn == 9 and win == False):
                 hud.set("tie game!")
+                draw = False
             b10 = tkinter.Button(ttt, text="retry", command = self.retry,fg="black" )
             b10.pack()
             b10.place(height=50,width=100, x=200, y=200)
