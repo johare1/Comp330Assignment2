@@ -26,6 +26,11 @@ class Board:
     
     global b1, b2, b3, b4, b5, b6, b7, b8, b9
     
+    def __init__(self, turn, win, draw):
+        self.turn = turn
+        self.win = False
+        self.draw = False
+    
     def makeBoard(self):
         canvas.create_line(167,0,167,500, fill = 'red')
         canvas.create_line(334,0,334,500, fill = 'red')
