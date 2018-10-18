@@ -64,7 +64,8 @@ class Board:
         """
     
 
-    def makeBoard(Player):
+    def makeBoard(self):
+        global canvas
 
         canvas.create_line(167,0,167,500, fill = 'red')
 

@@ -30,7 +30,7 @@ class Player(Board):
             num_wins2 = num_wins2 + 1
         elif(Board.draw == True):
             num_draws = num_draws + 1
-         
+    """     
     global winCount
     winCount = StringVar()
     global winDisp
@@ -38,7 +38,7 @@ class Player(Board):
     winDisp.pack()
     winDisp.place(height=20, width=100, x=200, y=450)
     winCount.set("Player 1 wins: " + num_wins1 + "Player 2 wins: " + num_wins2)
-    
+    """
 #creating board
 
 global board
