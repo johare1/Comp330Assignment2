@@ -8,7 +8,7 @@ This assignment is coded by Harmeet Singh, Ethan Davidson, Janeen Soria, and Joh
 - We built off of all of the code base, which was 318 lines of code and 10 methods in 1 file. In this project, there are //TODO write the number of lines of code, methods, and files when the project is done
 
 ###### How to Run the Code
-- //TODO explain how to run the files
+- The files can be ran by having all python files in one location and running the player.py file in a python ide.
 
 
 ###### Our Approach
